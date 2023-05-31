@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Renomear</title>
+</head>
+<body>
+    <div class="container">
+        <div class="img-box">
+            <img id="espadaIMG" src="" alt="">
+        </div>
+
+        <div class="content">
+            <div class="content-title">
+                <h1 id="espadaNOME"></h1>
+            </div>
+            <table class="content-table">
+                <tr class="table-divider">
+                    <td class="atributo">Ataque:</td>
+                    <td id="espadaATK" class="atributo-valor"></td>
+                </tr>
+                <tr class="table-divider">
+                    <td class="atributo">Defesa:</td>
+                    <td id="espadaDEF" class="atributo-valor"></td>
+                </tr>
+                <tr class="table-divider">
+                    <td class="atributo">Level:</td>
+                    <td id="espadaLVL" class="atributo-valor"></td>
+                </tr>
+                <tr class="table-divider">
+                    <td class="atributo">Peso:</td>
+                    <td id="espadaPESO" class="atributo-valor"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="botoes">
+            <button onclick="exibirEspadaAnterior()" id="anterior" class="btn-ant">Anterior</button>
+            <button onclick="exibirProximaEspada()" id="proxima" class="btn-prox">Próxima</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

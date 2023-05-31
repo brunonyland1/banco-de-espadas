@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Secular One', sans-serif;
+}
+
+.container{
+    width: 250px;
+    height: 400px;
+    background-color: #232528;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box{
+    width: 60px;
+    height: 60px;
+}
+
+.img-box img{
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.content-title{
+    font-size: 72px;
+    background: -webkit-linear-gradient(#FFE53B, #FF2525);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 10px;
+    margin-bottom: 35px;
+}
+
+.atributo{
+    color: #fff;
+}
+
+.atributo-valor{
+    background: -webkit-linear-gradient(#FFE53B, #FF2525);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: end;
+}
+
+.botoes{
+    margin-top: 35px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn-prox, .btn-ant{
+    background: -webkit-linear-gradient(#FFE53B, #FF2525);
+    border: none;
+    outline: none;
+    font-family: 'Secular One', sans-serif;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-prox:hover, .btn-ant:hover{
+    background: -webkit-linear-gradient(#FF2525, #FFE53B);
+}
+
