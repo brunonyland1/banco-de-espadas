@@ -14,6 +14,7 @@ body{
     align-items: center;
     height: 100vh;
     font-family: 'Secular One', sans-serif;
+    gap: 20px;
 }
 
 .container{
@@ -44,7 +45,7 @@ body{
     margin-top: 50px;
 }
 
-.content-title{
+.content-title, .add-title{
     font-size: 72px;
     background: -webkit-linear-gradient(#FFE53B, #FF2525);
     -webkit-background-clip: text;
@@ -55,6 +56,7 @@ body{
 
 .atributo{
     color: #fff;
+    font-size: 16px;
 }
 
 .atributo-valor{
@@ -62,6 +64,7 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: end;
+    font-size: 16px;
 }
 
 .botoes{
@@ -70,7 +73,7 @@ body{
     gap: 20px;
 }
 
-.btn-prox, .btn-ant{
+.btn-prox, .btn-ant, .btn-add, .btn-reset{
     background: -webkit-linear-gradient(#FFE53B, #FF2525);
     border: none;
     outline: none;
@@ -84,3 +87,119 @@ body{
     background: -webkit-linear-gradient(#FF2525, #FFE53B);
 }
 
+.container-2{
+    width: 250px;
+    height: 400px;
+    background-color: #232528;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.formulario,
+.row,
+.form-label,
+.form-input,
+.textarea {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type=number]{
+    -webkit-appearance: textfield;
+}
+
+input[type=file]{
+    display: none;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.row span{
+    color: white;
+    padding: 1px 10px;
+}
+
+.form-label{
+    font-family: 'Secular One', sans-serif;
+    color: white;
+    padding: 1px 10px;
+    font-size: 16px;
+}
+
+.label-file {
+    margin-right: 20px;
+    color: white;
+    border: 1px solid #ff933b;
+    border-radius: 4px;
+    padding: 3px 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background: -webkit-linear-gradient(#FF2525, #FFE53B);
+}
+
+.label-file:hover{
+    transition: .5s;
+    background: -webkit-linear-gradient(#FFE53B, #FF2525);
+    cursor: pointer;
+}
+
+.form-input{
+    font-family: 'Secular One', sans-serif;
+    background: -webkit-linear-gradient(#FFE53B, #FF2525);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: end;
+    width: 60%;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.form-input:focus{
+    outline: none;
+    animation: slidein 0.5s;
+}
+
+@keyframes slidein {
+    from {
+      border-bottom: #ff933b solid 1px; 
+      width: 0px;
+    }
+  
+    to {
+        border-bottom: #ff933b solid 1px; 
+      width: 100%;
+    }
+  }
+
+/*
+input,
+textarea {
+  border: 2px solid #ff0000;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+}
+*/

@@ -1,3 +1,5 @@
+/* Lista de Espadas */
+
 const itens = {
     espadas: [
             {
@@ -30,6 +32,8 @@ const itens = {
     ]
 };
 
+/* Carrega a primeira espada da lista ao entrar na página */
+
 let indiceEspadaAtual = 0;
 
 window.addEventListener("load", () => updateEspada());
@@ -46,6 +50,8 @@ window.addEventListener("load", () => updateEspada());
     document.querySelector('#espadaPESO').innerText = MagicLongSword.peso;
 }
 
+
+/* Exibe a próxima espada da lista ao clicar no botão */
 function exibirProximaEspada() {
     
     if (indiceEspadaAtual < itens.espadas.length -1) {
@@ -55,7 +61,9 @@ function exibirProximaEspada() {
     }
     updateEspada();
   }
-  
+ 
+
+/* Exibe a espada anterior da lista ao clicar no botão */  
 function exibirEspadaAnterior() {
     if (indiceEspadaAtual > 0) {
         indiceEspadaAtual--;
@@ -65,4 +73,64 @@ function exibirEspadaAnterior() {
     updateEspada();
 }
 
+const addEspadaNome = document.querySelector('#nome');
+const addEspadaAtaque = document.querySelector('#ataque');
+const addEspadaDefesa = document.querySelector('#defesa');
+const addEspadaLevel = document.querySelector('#level');
+const addEspadaPeso = document.querySelector('#peso');
+
+const resetEspada = () => {
+    addEspadaNome.value = '';
+    addEspadaAtaque.value = '';
+    addEspadaDefesa.value = '';
+    addEspadaLevel.value = '';
+    addEspadaPeso.value = '';
+}
+
+function previewImage(event) {
+    const fileInput = event.target;
+    const imgPreview = document.querySelector('#espadaImgPrev');
+    
+    if (fileInput.files && fileInput.files[0]) {
+      const reader = new FileReader();
+      
+      reader.onload = function (e) {
+        imgPreview.src = e.target.result;
+      }
+      
+      reader.readAsDataURL(fileInput.files[0]);
+    }
+  }
+
+function limparPreview() {
+    const espadaImgPrev = document.querySelector('#espadaImgPrev');
+    espadaImgPrev.parentNode.removeChild(espadaImgPrev);
+}
+
+const insertEspada = () => {
+    const nome = addEspadaNome.value;
+    const ataque = addEspadaAtaque.value;
+    const defesa = addEspadaDefesa.value;
+    const level = addEspadaLevel.value;
+    const peso = addEspadaPeso.value;
+    const imagem = document.querySelector('#espadaImgPrev').src;
+
+    if (nome == '' || ataque == '' || defesa == '' || level == '' || peso == '' || imagem.src == '') {
+            alert('Preencha todos os campos!');
+        } else{
+            const novoEspada = {
+                id: itens.espadas.length + 1,
+                imagem: imagem,
+                nome: nome,
+                ataque: ataque,
+                defesa: defesa,
+                level: level,
+                peso: peso
+            }
+            itens.espadas.push(novoEspada);
+            updateEspada();
+            resetEspada();
+            limparPreview();
+        }
+}
 

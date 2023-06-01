@@ -43,6 +43,48 @@
         </div>
     </div>
 
+    <div class="container-2">
+        <div class="add-title">
+            <h1>Registre sua Espada</h1>
+        </div>
+
+        <div class="img-box">
+            <img id="espadaImgPrev" src="" alt="">
+        </div>
+
+    <form class="formulario">
+        <div class="row">
+            <span>Imagem:</span>
+            <label class="label-file" for="file" id="addEspadaImg">Selecionar...</label>
+	        <input class="form-input" type="file" id="file" accept="image/*" onchange="previewImage(event)" placeholder="Selecionar imagem" >
+        </div>
+        <div class="row">
+            <label class="form-label" for="nome">Nome:</label>
+            <input class="form-input" name="nome" id="nome" type="text" placeholder="Espada Curta" />
+        </div>
+        <div class="row">
+            <label class="form-label" for="ataque">Ataque:</label>
+            <input class="form-input" id="ataque" type="number" placeholder="10" />
+        </div>
+        <div class="row">
+            <label class="form-label" for="defesa">Defesa:</label>
+            <input class="form-input" id="defesa" type="number" placeholder="5" />
+        </div>
+        <div class="row">
+            <label class="form-label" for="level">Level:</label>
+            <input class="form-input" id="level" type="number" placeholder="1" />
+        </div>
+        <div class="row">
+            <label class="form-label" for="peso">Peso:</label>
+            <input class="form-input" id="peso" type="number" placeholder="23.00" />
+        </div>
+    </form>
+    <div class="botoes">
+        <button onclick="insertEspada()" id="btn-add" class="btn-add">Registrar</button>
+        <button onclick="resetEspada()" id="btn-reset" class="btn-reset">Resetar</button>
+    </div>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
