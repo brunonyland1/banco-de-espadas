@@ -39,8 +39,9 @@
 
         <div class="botoes">
             <button onclick="exibirEspadaAnterior()" id="anterior" class="btn-ant">Anterior</button>
-            <button onclick="excluirEspada()" id="excluir" class="btn-exc">Excluir</button>
             <button onclick="exibirProximaEspada()" id="proxima" class="btn-prox">Próxima</button>
+            <button onclick="editarEspada()" id="editar" class="btn-edi">Editar</button>
+            <button onclick="excluirEspada()" id="excluir" class="btn-exc">Excluir</button>
         </div>
     </div>
 
@@ -50,7 +51,7 @@
         </div>
 
         <div class="img-box">
-            <img id="espadaImgPrev" src="" alt="">
+            <img id="espadaImgPrev" src="./imagens/Dagger.gif" alt=''/>
         </div>
 
     <form class="formulario">
@@ -82,6 +83,7 @@
     </form>
     <div class="botoes">
         <button onclick="insertEspada()" id="btn-add" class="btn-add">Registrar</button>
+        <button onclick="salvarEdicao()" id="btn-save" class="btn-save">Salvar</button>
         <button onclick="resetEspada()" id="btn-reset" class="btn-reset">Resetar</button>
     </div>
     </div>

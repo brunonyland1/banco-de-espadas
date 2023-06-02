@@ -74,9 +74,12 @@ body{
     margin-top: 35px;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.btn-prox, .btn-ant, .btn-add, .btn-reset, .btn-exc{
+.btn-prox, .btn-ant, .btn-add, .btn-reset, .btn-exc, .btn-save, .btn-edi{
     background: -webkit-linear-gradient(#FFE53B, #FF2525);
     border: none;
     outline: none;
@@ -84,6 +87,7 @@ body{
     color: #fff;
     padding: 5px 10px;
     cursor: pointer;
+    flex-basis: 40%;
 }
 
 .btn-prox:hover, .btn-ant:hover, .btn-exc:hover{

@@ -59,12 +59,36 @@ const resetEspada = () => {
     addEspadaDefesa.value = '';
     addEspadaLevel.value = '';
     addEspadaPeso.value = '';
+    limparPreview()
 }
 
 const excluirEspada = () => {
     espadaDB.espadas.splice(indiceEspadaAtual, 1);
     updateLocalStorage();
     exibirProximaEspada();
+}
+
+const editarEspada = () => {
+    resetEspada();
+    const espadaImgPrev = document.querySelector('#espadaImgPrev');
+    espadaImgPrev.src = espadaDB.espadas[indiceEspadaAtual].imagem;
+    addEspadaNome.value = espadaDB.espadas[indiceEspadaAtual].nome;
+    addEspadaAtaque.value = espadaDB.espadas[indiceEspadaAtual].ataque;
+    addEspadaDefesa.value = espadaDB.espadas[indiceEspadaAtual].defesa;
+    addEspadaLevel.value = espadaDB.espadas[indiceEspadaAtual].level;
+    addEspadaPeso.value = espadaDB.espadas[indiceEspadaAtual].peso;
+}
+
+const salvarEdicao = () => {
+    espadaDB.espadas[indiceEspadaAtual].nome = addEspadaNome.value;
+    espadaDB.espadas[indiceEspadaAtual].ataque = addEspadaAtaque.value;
+    espadaDB.espadas[indiceEspadaAtual].defesa = addEspadaDefesa.value;
+    espadaDB.espadas[indiceEspadaAtual].level = addEspadaLevel.value;
+    espadaDB.espadas[indiceEspadaAtual].peso = addEspadaPeso.value;
+    espadaDB.espadas[indiceEspadaAtual].imagem = espadaImgPrev.src;
+    updateLocalStorage();
+    exibirProximaEspada();
+    resetEspada();
 }
 
 function previewImage(event) {
@@ -84,7 +108,7 @@ function previewImage(event) {
 
 function limparPreview() {
     const espadaImgPrev = document.querySelector('#espadaImgPrev');
-    espadaImgPrev.parentNode.removeChild(espadaImgPrev);
+    espadaImgPrev.src = './imagens/Dagger.gif';
 }
 
 const insertEspada = () => {
